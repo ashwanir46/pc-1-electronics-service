@@ -46,5 +46,8 @@ public class ElectronicListService {
 
         int index = searchElectronicItemInList(list, "Computer");
         System.out.println("index = " + index);
+
+        boolean result = removeElectronicsItemFromList(list, "Computer");
+        System.out.println("result = " + result);
     }
 }
