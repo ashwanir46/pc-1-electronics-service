@@ -37,6 +37,7 @@ public class ElectronicListService {
         list = addElectronicsItemsToList("TV,Computer,Refrigerator,TV");
         System.out.println("list = " + list);
 
-
+        int index = searchElectronicItemInList(list, "Computer");
+        System.out.println("index = " + index);
     }
 }
