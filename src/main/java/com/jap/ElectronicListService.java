@@ -1,6 +1,7 @@
 package com.jap;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ElectronicListService {
@@ -27,7 +28,13 @@ public class ElectronicListService {
     //remove the electronic item from the list using iterator
     public static boolean removeElectronicsItemFromList(List<String> itemList, String removeItem) {
         boolean flag = false;
-
+        Iterator iterator = itemList.iterator();
+        while (iterator.hasNext()) {
+            if (iterator.next().equals(removeItem)) {
+                itemList.remove(removeItem);
+                flag = true;
+            }
+        }
         return flag;
     }
 
