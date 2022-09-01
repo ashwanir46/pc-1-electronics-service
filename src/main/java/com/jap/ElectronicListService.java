@@ -1,13 +1,19 @@
 package com.jap;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class ElectronicListService {
     //add all the electronics items inside the List
     public static List<String> addElectronicsItemsToList(String electronicsItems) {
-       List<String> itemList = null;
+        List<String> itemList = null;
+        String[] value = electronicsItems.split(",");
+        itemList = new ArrayList<>();
+        for (int i = 0; i < value.length; i++) {
+            if (!itemList.contains(value[i])) {
+                itemList.add(value[i]);
+            }
+        }
         return itemList;
     }
 
