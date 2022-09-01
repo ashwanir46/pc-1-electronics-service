@@ -23,12 +23,15 @@ public class ElectronicListService {
     }
 
     //remove the electronic item from the list using iterator
-    public static boolean removeElectronicsItemFromList(List<String> itemList, String removeItem)
-    {
+    public static boolean removeElectronicsItemFromList(List<String> itemList, String removeItem) {
         boolean flag = false;
 
         return flag;
     }
 
-
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list = addElectronicsItemsToList("TV,Computer,Refrigerator,TV");
+        System.out.println("list = " + list);
+    }
 }
