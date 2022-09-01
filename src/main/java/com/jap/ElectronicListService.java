@@ -19,7 +19,9 @@ public class ElectronicListService {
 
     //search the electronic item from the list and return the index position
     public static int searchElectronicItemInList(List<String> itemList, String searchItem) {
-        return -1;
+
+        int index = itemList.indexOf(searchItem);
+        return index;
     }
 
     //remove the electronic item from the list using iterator
@@ -30,8 +32,11 @@ public class ElectronicListService {
     }
 
     public static void main(String[] args) {
+
         List<String> list = new ArrayList<>();
         list = addElectronicsItemsToList("TV,Computer,Refrigerator,TV");
         System.out.println("list = " + list);
+
+
     }
 }
